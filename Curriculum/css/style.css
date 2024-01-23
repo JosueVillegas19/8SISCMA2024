@@ -9,7 +9,7 @@ body {
     background-color: #F5F7FA;
 }
 
-.container {
+.Container {
     margin: auto;
     display: grid;
     grid-template-columns: 0.33fr 1fr;
@@ -19,7 +19,7 @@ body {
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.7);
 }
 
-.container .cuadro1 {
+.Container .cuadro1 {
     padding: 40px 20px;
     padding-left: 35px;
     background-color: #B794F4;
