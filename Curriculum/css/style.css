@@ -68,3 +68,17 @@ body {
 {
     margin-bottom: 10px;
 }
+
+.Container .cuadro1 .PasaTiempo
+{
+    margin-top: 10px;
+}
+
+.Container .cuadro1 .PasaTiempo>* 
+{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 0.3fr 1fr;
+    margin-top: 10px;
+    align-items: center;
+}
