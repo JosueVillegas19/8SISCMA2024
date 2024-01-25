@@ -58,3 +58,8 @@ body {
     display: inline-flex;
     word-break: break-all;
 }
+
+.Container .cuadro1 .Habilidades
+{
+    margin-top: 35px;
+}
