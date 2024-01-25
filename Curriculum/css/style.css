@@ -69,12 +69,12 @@ body {
     margin-bottom: 10px;
 }
 
-.Container .cuadro1 .PasaTiempo
+.Container .cuadro1 .Actitudes
 {
     margin-top: 35px;
 }
 
-.Container .cuadro1 .PasaTiempo>* 
+.Container .cuadro1 .Actitudes>* 
 {
     width: 100%;
     display: grid;
