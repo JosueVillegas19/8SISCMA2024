@@ -38,3 +38,23 @@ body {
     border-radius: 80%;
     border: 4px solid #E4E7EB ;
 }
+
+.Container .cuadro1 .contacto
+{
+    margin-top: 10px;
+}
+
+.Container .cuadro1 .contacto>* 
+{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 0.3fr 1fr;
+    margin-top: 25px;
+    align-items: center;
+}
+
+.Container .cuadro1 .contacto>* .text
+{
+    display: inline-flex;
+    word-break: break-all;
+}
