@@ -6,6 +6,7 @@
 }
 
 body {
+    min-height: 222vh;
     background-color: #F5F7FA;
 }
 
@@ -13,30 +14,19 @@ body {
     margin: auto;
     display: grid;
     grid-template-columns: 0.33fr 1fr;
-    width: 210mm;
-    height: 297mm;
+    width: 225mm;
+    height: 350mm;
     overflow: hidden; 
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.7);
 }
 
 .Container .cuadro1 
 {
-    padding: 40px 20px;
+    padding: 40px 40px;
     padding-left: 35px;
     background-color: #B794F4;
     width: 100%;
     color: #ffffff;
-}
-
-.Container .cuadro1 .perfil
-{
-    display: inline-flex;
-    margin-bottom: 5px;
-    margin-left: -15px;
-    width: 220px;
-    height: 220px;
-    border-radius: 80%;
-    border: 4px solid #ffffff ;
 }
 
 .Container .cuadro1 .contacto
@@ -82,3 +72,75 @@ body {
     margin-top: 10px;
     align-items: center;
 }
+
+.Container .cuadro1 .Lenguaje
+{
+    margin-top: 35px;
+}
+
+.Container .cuadro1 .Lenguaje .punto
+{
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: #5f6874;
+    border-radius: 50%;
+    margin-left: 4px;
+}
+
+.Container .cuadro1 .Lenguaje .punto.active
+{
+    background-color: #E4E7EB;
+}
+
+.Container .cuadro2 
+{
+    background-color: #F5F7FA;
+    padding: 40px 20px;
+    padding-right: 75px;
+    color: #5f6874;
+}
+
+.Container .cuadro2 .Nombre 
+{
+    font-size: 1.7em;
+    color: #5f6874;
+    font-weight: 400;
+}
+
+.Container .cuadro2 .Cuadro3
+{
+    display: inline-block;
+    padding: 2px 70px 2px 20px;
+    margin-left: -20px;
+    margin-top: 35px;
+    background-color: #DDB0FF;
+    color: #ffffff;
+} 
+
+.Container .cuadro2 .Personal .Resumen
+{
+    margin-top: 15px;
+    line-height: 1.5;
+    color: #5f6874;
+}
+
+.Container .cuadro2 .Personal2 .Educacion
+{
+    margin-top: 15px;
+    margin-left: 20px;
+}
+
+.Container .cuadro2 .Personal3 .Experiencia
+{
+    margin-top: 15px;
+    margin-left: 20px;
+}
+
+.Container .cuadro2 .Personal3 .Diploma
+{
+    margin-top: 15px;
+    margin-left: 20px;
+}
+
+
