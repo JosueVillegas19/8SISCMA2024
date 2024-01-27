@@ -1,5 +1,5 @@
 * {
-    font-family: 'Merriweather', sans-serif;
+    font-family: 'Merriweather Sans', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -103,9 +103,9 @@ body {
 
 .Container .cuadro2 .Nombre 
 {
-    font-size: 1.7em;
+    font-size: 1.9em;
     color: #5f6874;
-    font-weight: 400;
+    font-weight: 500;
 }
 
 .Container .cuadro2 .Cuadro3
