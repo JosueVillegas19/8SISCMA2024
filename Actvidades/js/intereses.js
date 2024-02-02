@@ -208,7 +208,3 @@ function calcularUtilidad() {
 
     document.getElementById("utilidadAnual").textContent = "$" + utilidadAnual.toFixed(2);
 }
-
-
-
-
