@@ -34,22 +34,19 @@
                                 <td>
                                     <input type="text" readonly="readonly" class="input_text" name="sueldoI" id="cantidadI">
                                 </td>
-                            </tr>
-                                                    
+                            </tr>                                                  
                             <tr>
                                 <td></td>
                                 <td>
                                     <input type="button" value="Borrar Datos" name="borrar" onclick="borrardato()">
                                 </td>
                             </tr>
-
                         </table>
                     </div>
                 </form>
             </div>
         </div>
-
-        ////////////////////////////////////////////////
+        <p>____________________________________________________________________________________</p>
         <div class="text">
             <p>Total por comisiones de las tres ventas en el mes.</p>
             <div class="form">
@@ -77,11 +74,8 @@
                 <p>El monto total por concepto de comisiones es: <span id="comisiones" class="resultado-valor"></span></p>
                 <p>El total que recibirá en el mes es: <span id="totalMes" class="resultado-valor"></span></p>
             </div>
-        </div>
-        
-        
-        ////////////////////////////////////////////////
-
+        </div>   
+        <p>____________________________________________________________________________________</p>
         <div class="text">
             <p>Calculadora de Descuento.</p>
             <label for="totalCompra">Total de la compra:</label>
@@ -93,9 +87,43 @@
                 <p>Monto final a pagar: <span id="montoFinal" class="resultado-valor"></span></p>
             </div>
         </div>
-
-        /////////////////////////////////////////////////////
-        
+        <p>____________________________________________________________________________________</p>
+        <div class="text">
+            <p>Calcular la calificación final en la materia de Algoritmos</p>
+            <div class="form">
+                <div class="table-content">
+                    <table>
+                        <tr>
+                            <td>Calificación parcial 1:</td>
+                            <td><input type="number" id="parcial1" required min="0" max="100"></td>
+                        </tr>
+                        <tr>
+                            <td>Calificación parcial 2:</td>
+                            <td><input type="number" id="parcial2" required min="0" max="100"></td>
+                        </tr>
+                        <tr>
+                            <td>Calificación parcial 3:</td>
+                            <td><input type="number" id="parcial3" required min="0" max="100"></td>
+                        </tr>
+                        <tr>
+                            <td>Calificación examen final:</td>
+                            <td><input type="number" id="examenFinal" required min="0" max="100"></td>
+                        </tr>
+                        <tr>
+                            <td>Calificación trabajo final:</td>
+                            <td><input type="number" id="trabajoFinal" required min="0" max="100"></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2"><br><button type="button" onclick="calcularCalificacionFinal()">Calcular</button></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div id="resultado" class="resultado-box">
+                <p>La calificación final es: <span id="calificacionFinal" class="resultado-valor"></span></p>
+            </div>
+        </div>
+        <p>____________________________________________________________________________________</p>
         <div class="text">
             <p>Porcentaje de hombres y mujeres en un grupo de estudiantes.</p>
             <div class="form">
@@ -120,9 +148,7 @@
                 <p>Porcentaje de mujeres: <span id="porcentajeMujeres" class="resultado-valor"></span></p>
             </div>
         </div>
-        
-        ////////////////////////////////////
-
+        <p>____________________________________________________________________________________</p>
         <div class="text">
             <p>Calcular la edad de una persona.</p>
             <div class="form">
@@ -146,9 +172,7 @@
                 <p>La edad es: <span id="edad" class="resultado-valor"></span></p>
             </div>
         </div>
-        
-        //////////////////////////////////////
-
+        <p>____________________________________________________________________________________</p>
         <div class="text">
             <p>Comparar dos números y realizar una operación según el orden.</p>
             <div class="form">
@@ -172,6 +196,92 @@
                 <p>El resultado es: <span id="resultadoOperacion" class="resultado-valor"></span></p>
             </div>
         </div>
+        <p>____________________________________________________________________________________</p>
+        <div class="text">
+            <p>Encontrar el mayor de tres números</p>
+            <div class="form">
+                <div class="table-content">
+                    <table>
+                        <tr>
+                            <td>Ingrese el primer número:</td>
+                            <td><input type="number" id="num1" required></td>
+                        </tr>
+                        <tr>
+                            <td>Ingrese el segundo número:</td>
+                            <td><input type="number" id="num2" required></td>
+                        </tr>
+                        <tr>
+                            <td>Ingrese el tercer número:</td>
+                            <td><input type="number" id="num3" required></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2"><br><button type="button" onclick="encontrarMayor()">Encontrar Mayor</button></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div id="resultado" class="resultado-box">
+                <p>El número mayor es: <span id="mayor" class="resultado-valor"></span></p>
+            </div>
+        </div>
+        <p>____________________________________________________________________________________</p>
+        <div class="text">
+            <p>Calcular el pago por horas extras</p>
+            <div class="form">
+                <div class="table-content">
+                    <table>
+                        <tr>
+                            <td>Horas trabajadas:</td>
+                            <td><input type="number" id="horasTrabajadas" required></td>
+                        </tr>
+                        <tr>
+                            <td>Salario por hora:</td>
+                            <td><input type="number" id="salarioPorHora" required></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2"><br><button type="button" onclick="calcularPago()">Calcular</button></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div id="resultado" class="resultado-box">
+                <p>El pago por horas extras es: <span id="pagoHorasExtras" class="resultado-valor"></span></p>
+            </div>
+        </div>
+        <p>____________________________________________________________________________________</p>
+        <div class="text">
+            <p>Calcular la utilidad anual según la antigüedad en la empresa</p>
+            <div class="form">
+                <div class="table-content">
+                    <table>
+                        <tr>
+                            <td>Tiempo en la empresa:</td>
+                            <td>
+                                <select id="antiguedad">
+                                    <option value="menos1">Menos de 1 año</option>
+                                    <option value="1a2">1 año o más y menos de 2 años</option>
+                                    <option value="2a5">2 años o más y menos de 5 años</option>
+                                    <option value="5a10">5 años o más y menos de 10 años</option>
+                                    <option value="mas10">10 años o más</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Salario mensual:</td>
+                            <td><input type="number" id="salarioMensual" required></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2"><br><button type="button" onclick="calcularUtilidad()">Calcular</button></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div id="resultado" class="resultado-box">
+                <p>La utilidad anual es: <span id="utilidadAnual" class="resultado-valor"></span></p>
+            </div>
+        </div>
+        
+        
         
         
         
