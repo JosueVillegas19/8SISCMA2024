@@ -101,9 +101,3 @@ function calcularOperacion() {
 
     document.getElementById("resultadoOperacion").textContent = resultado;
 }
-
-
-
-
-
-
