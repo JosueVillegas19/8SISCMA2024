@@ -23,10 +23,18 @@ function borrardato() {
     document.formulario.cantidad.value = "";
     document.formulario.sueldoI.value = "";
 }
+//Ejericicio2///////////////////////////////////////////////////////////////////////////////////
+function validarNumero(event) {
+    var charCode = (event.which) ? event.which : event.keyCode;
+    if (charCode > 31 && (charCode < 48 || charCode > 57)) {
+        return false;
+    }
+    return true;
+}
 
 function calcularComisiones() {
     const sueldoBase = 1000;
-    const porcentajeComision = 0.10; 
+    const porcentajeComision = 0.10;
 
     const venta1 = parseFloat(document.getElementById("venta1").value);
     const venta2 = parseFloat(document.getElementById("venta2").value);
@@ -39,26 +47,20 @@ function calcularComisiones() {
     document.getElementById("comisiones").textContent = "$" + comision.toFixed(2);
     document.getElementById("totalMes").textContent = "$" + totalMes.toFixed(2);
 }
-
-
+///Ejercicio3/////////////////////////////////////////////////////////////////////////////////////////////////
 document.getElementById("calcularBtn").addEventListener("click", function() {
     var totalCompra = parseFloat(document.getElementById("totalCompra").value);
     var montoFinal = totalCompra * 0.85; 
     document.getElementById("montoFinal").innerHTML = montoFinal.toFixed(2);
 });
-
-function calcularPorcentajes() {
-    const cantidadHombres = parseFloat(document.getElementById("hombres").value);
-    const cantidadMujeres = parseFloat(document.getElementById("mujeres").value);
-
-    const totalEstudiantes = cantidadHombres + cantidadMujeres;
-    const porcentajeHombres = (cantidadHombres / totalEstudiantes) * 100;
-    const porcentajeMujeres = (cantidadMujeres / totalEstudiantes) * 100;
-
-    document.getElementById("porcentajeHombres").textContent = porcentajeHombres.toFixed(2) + "%";
-    document.getElementById("porcentajeMujeres").textContent = porcentajeMujeres.toFixed(2) + "%";
+////Ejercicio4/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+function validarNumero(event) {
+    var charCode = (event.which) ? event.which : event.keyCode;
+    if (charCode > 31 && (charCode < 48 || charCode > 57)) {
+        return false;
+    }
+    return true;
 }
-
 function calcularCalificacionFinal() {
     const parcial1 = parseFloat(document.getElementById("parcial1").value);
     const parcial2 = parseFloat(document.getElementById("parcial2").value);
@@ -77,7 +79,19 @@ function calcularCalificacionFinal() {
 
     document.getElementById("calificacionFinal").textContent = calificacionFinal.toFixed(2);
 }
+//Ejercicio5///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+function calcularPorcentajes() {
+    const cantidadHombres = parseFloat(document.getElementById("hombres").value);
+    const cantidadMujeres = parseFloat(document.getElementById("mujeres").value);
 
+    const totalEstudiantes = cantidadHombres + cantidadMujeres;
+    const porcentajeHombres = (cantidadHombres / totalEstudiantes) * 100;
+    const porcentajeMujeres = (cantidadMujeres / totalEstudiantes) * 100;
+
+    document.getElementById("porcentajeHombres").textContent = porcentajeHombres.toFixed(2) + "%";
+    document.getElementById("porcentajeMujeres").textContent = porcentajeMujeres.toFixed(2) + "%";
+}
+//Ejercicio6///////////////////////////////////////////////////////////////////////////////////////////////////////////////
 function calcularEdad() {
     const dia = parseInt(document.getElementById("dia").value);
     const mes = parseInt(document.getElementById("mes").value);
@@ -99,7 +113,45 @@ function calcularEdad() {
     const edad = Math.floor(diff / (1000 * 60 * 60 * 24 * 365.25));
     document.getElementById("edad").textContent = edad + " años";
 }
+//Ejercicio7/////////////////////////////////////////////////////////////////////////////////////////////////
+function validarNumero(event) {
+    const input = event.target.value;
+    const ultimaPosicion = input.length - 1;
+    const ultimoCaracter = input.charAt(ultimaPosicion);
+    
+    const esNumero = !isNaN(ultimoCaracter);
+    const esPuntoDecimal = ultimoCaracter === ".";
+    const esNegativo = ultimoCaracter === "-";
+    
+    if (!esNumero && !esPuntoDecimal && !esNegativo) {
+        event.target.value = input.slice(0, ultimaPosicion);
+    } else if (esPuntoDecimal && input.indexOf(".") !== ultimaPosicion) {
+        event.target.value = input.slice(0, ultimaPosicion);
+    } else if (esNegativo && input.indexOf("-") !== ultimaPosicion) {
+        event.target.value = input.slice(0, ultimaPosicion);
+    }
+}
+function encontrarMayor() {
+    const num1 = parseFloat(document.getElementById("num1").value);
+    const num2 = parseFloat(document.getElementById("num2").value);
+    const num3 = parseFloat(document.getElementById("num3").value);
 
+    if (isNaN(num1) || isNaN(num2) || isNaN(num3)) {
+        alert("Introduzca tres números válidos.");
+        return;
+    }
+
+    let mayor = num1;
+    if (num2 > mayor) {
+        mayor = num2;
+    }
+    if (num3 > mayor) {
+        mayor = num3;
+    }
+
+    document.getElementById("mayor").textContent = mayor;
+}
+//Ejercicio8//////////////////////////////////////////////////////////////////////////////////////
 function calcularOperacion() {
     const numero1 = parseInt(document.getElementById("numero1").value);
     const numero2 = parseInt(document.getElementById("numero2").value);
@@ -120,34 +172,31 @@ function calcularOperacion() {
 
     document.getElementById("resultadoOperacion").textContent = resultado;
 }
-
-function encontrarMayor() {
-    const num1 = parseInt(document.getElementById("num1").value);
-    const num2 = parseInt(document.getElementById("num2").value);
-    const num3 = parseInt(document.getElementById("num3").value);
-
-    if (isNaN(num1) || isNaN(num2) || isNaN(num3)) {
-        alert("Introduca tres números válidos.");
-        return;
+//Ejercicio9////////////////////////////////////////////////////////////////////////////////////////////////////
+function validarNumero(event) {
+    const input = event.target.value;
+    const ultimaPosicion = input.length - 1;
+    const ultimoCaracter = input.charAt(ultimaPosicion);
+    
+    const esNumero = !isNaN(ultimoCaracter);
+    const esPuntoDecimal = ultimoCaracter === ".";
+    const esNegativo = ultimoCaracter === "-";
+    
+    if (!esNumero && !esPuntoDecimal && !esNegativo) {
+        event.target.value = input.slice(0, ultimaPosicion);
+    } else if (esPuntoDecimal && input.indexOf(".") !== ultimaPosicion) {
+        event.target.value = input.slice(0, ultimaPosicion);
+    } else if (esNegativo && input.indexOf("-") !== ultimaPosicion) {
+        event.target.value = input.slice(0, ultimaPosicion);
     }
-
-    let mayor = num1;
-    if (num2 > mayor) {
-        mayor = num2;
-    }
-    if (num3 > mayor) {
-        mayor = num3;
-    }
-
-    document.getElementById("mayor").textContent = mayor;
 }
 
 function calcularPago() {
-    const horasTrabajadas = parseInt(document.getElementById("horasTrabajadas").value);
+    const horasTrabajadas = parseFloat(document.getElementById("horasTrabajadas").value);
     const salarioPorHora = parseFloat(document.getElementById("salarioPorHora").value);
 
     if (isNaN(horasTrabajadas) || isNaN(salarioPorHora)) {
-        alert("Introduzca valores positivos.");
+        alert("Introduzca valores válidos.");
         return;
     }
 
@@ -173,6 +222,7 @@ function calcularPago() {
 
     document.getElementById("pagoHorasExtras").textContent = "$" + salarioTotal.toFixed(2);
 }
+//Ejercicio10////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 function calcularUtilidad() {
     const antiguedad = document.getElementById("antiguedad").value;

@@ -47,131 +47,175 @@
             </div>
         </div>
         <p>____________________________________________________________________________________</p>
-        <div class="text">
-            <p>Total por comisiones de las tres ventas en el mes.</p>
-            <div class="form">
-                <div class="table-content">
-                    <table>
-                        <tr>
-                            <td>Introduce la cantidad de la venta 1:</td>
-                            <td><input type="number" id="venta1" required min="0"></td>
-                        </tr>
-                        <tr>
-                            <td>Introduce la cantidad de la venta 2:</td>
-                            <td><input type="number" id="venta2" required min="0"></td>
-                        </tr>
-                        <tr>
-                            <td>Introduce la cantidad de la venta 3:</td>
-                            <td><input type="number" id="venta3" required min="0"></td>
-                        </tr>
-                        <tr>
-                            <td colspan="2"><br><button type="button" onclick="calcularComisiones()">Calcular</button></td>
-                        </tr>
-                    </table>
+        <div class="container">
+            <div class="text">
+                <p>Total por comisiones de las tres ventas en el mes.</p>
+                <div class="form">
+                    <div class="table-content">
+                        <table>
+                            <tr>
+                                <td>Introduce la cantidad de la venta 1:</td>
+                                <td><input type="text" id="venta1" onkeypress="return validarNumero(event)" required></td>
+                            </tr>
+                            <tr>
+                                <td>Introduce la cantidad de la venta 2:</td>
+                                <td><input type="text" id="venta2" onkeypress="return validarNumero(event)" required></td>
+                            </tr>
+                            <tr>
+                                <td>Introduce la cantidad de la venta 3:</td>
+                                <td><input type="text" id="venta3" onkeypress="return validarNumero(event)" required></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2"><br><button type="button" onclick="calcularComisiones()">Calcular</button></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div id="resultado" class="resultado-box">
+                    <p>El monto total por concepto de comisiones es: <span id="comisiones" class="resultado-valor"></span></p>
+                    <p>El total que recibirá en el mes es: <span id="totalMes" class="resultado-valor"></span></p>
                 </div>
             </div>
-            <div id="resultado" class="resultado-box">
-                <p>El monto total por concepto de comisiones es: <span id="comisiones" class="resultado-valor"></span></p>
-                <p>El total que recibira en el mes es: <span id="totalMes" class="resultado-valor"></span></p>
-            </div>
-        </div>   
+        </div>               
         <p>____________________________________________________________________________________</p>
-        <div class="text">
-            <p>Calculadora de Descuento.</p>
-            <label for="totalCompra">Total de la compra:</label>
-            <input type="number" id="totalCompra">
-            <br><br>
-            <button id="calcularBtn">Calcular</button>
-            <br>
-            <div id="resultado" class="resultado-box">
-                <p>Monto final a pagar: <span id="montoFinal" class="resultado-valor"></span></p>
-            </div>
-        </div>
-        <p>____________________________________________________________________________________</p>
-        <div class="text">
-            <p>Calcular la calificación final en la materia de Algoritmos</p>
-            <div class="form">
-                <div class="table-content">
-                    <table>
-                        <tr>
-                            <td>Calificación parcial 1:</td>
-                            <td><input type="number" id="parcial1" required min="0" max="100"></td>
-                        </tr>
-                        <tr>
-                            <td>Calificación parcial 2:</td>
-                            <td><input type="number" id="parcial2" required min="0" max="100"></td>
-                        </tr>
-                        <tr>
-                            <td>Calificación parcial 3:</td>
-                            <td><input type="number" id="parcial3" required min="0" max="100"></td>
-                        </tr>
-                        <tr>
-                            <td>Calificación examen final:</td>
-                            <td><input type="number" id="examenFinal" required min="0" max="100"></td>
-                        </tr>
-                        <tr>
-                            <td>Calificación trabajo final:</td>
-                            <td><input type="number" id="trabajoFinal" required min="0" max="100"></td>
-                        </tr>
-                        <tr>
-                            <td colspan="2"><br><button type="button" onclick="calcularCalificacionFinal()">Calcular</button></td>
-                        </tr>
-                    </table>
+        <div class="container">
+            <div class="text">
+                <p>Calculadora de Descuento.</p>
+                <label for="totalCompra">Total de la compra:</label>
+                <input type="text" id="totalCompra" onkeypress="return validarNumero(event)">
+                <br><br>
+                <button id="calcularBtn">Calcular</button>
+                <br>
+                <div id="resultado" class="resultado-box">
+                    <p>Monto final a pagar: <span id="montoFinal" class="resultado-valor"></span></p>
                 </div>
             </div>
-            <div id="resultado" class="resultado-box">
-                <p>La calificación final es: <span id="calificacionFinal" class="resultado-valor"></span></p>
-            </div>
-        </div>
+        </div>              
         <p>____________________________________________________________________________________</p>
-        <div class="text">
-            <p>Porcentaje de hombres y mujeres en un grupo de estudiantes.</p>
-            <div class="form">
-                <div class="table-content">
-                    <table>
-                        <tr>
-                            <td>Introduce la cantidad de hombres:</td>
-                            <td><input type="number" id="hombres" required min="0"></td>
-                        </tr>
-                        <tr>
-                            <td>Introduce la cantidad de mujeres:</td>
-                            <td><input type="number" id="mujeres" required min="0"></td>
-                        </tr>
-                        <tr>
-                            <td colspan="2"><br><button type="button" onclick="calcularPorcentajes()">Calcular</button></td>
-                        </tr>
-                    </table>
+        <div class="container">
+            <div class="text">
+                <p>Calcular la calificación final en la materia de Algoritmos</p>
+                <div class="form">
+                    <div class="table-content">
+                        <table>
+                            <tr>
+                                <td>Calificación parcial 1:</td>
+                                <td><input type="text" id="parcial1" onkeypress="return validarNumero(event)" required></td>
+                            </tr>
+                            <tr>
+                                <td>Calificación parcial 2:</td>
+                                <td><input type="text" id="parcial2" onkeypress="return validarNumero(event)" required></td>
+                            </tr>
+                            <tr>
+                                <td>Calificación parcial 3:</td>
+                                <td><input type="text" id="parcial3" onkeypress="return validarNumero(event)" required></td>
+                            </tr>
+                            <tr>
+                                <td>Calificación examen final:</td>
+                                <td><input type="text" id="examenFinal" onkeypress="return validarNumero(event)" required></td>
+                            </tr>
+                            <tr>
+                                <td>Calificación trabajo final:</td>
+                                <td><input type="text" id="trabajoFinal" onkeypress="return validarNumero(event)" required></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2"><br><button type="button" onclick="calcularCalificacionFinal()">Calcular</button></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div id="resultado" class="resultado-box">
+                    <p>La calificación final es: <span id="calificacionFinal" class="resultado-valor"></span></p>
                 </div>
             </div>
-            <div id="resultado" class="resultado-box">
-                <p>Porcentaje de hombres: <span id="porcentajeHombres" class="resultado-valor"></span></p>
-                <p>Porcentaje de mujeres: <span id="porcentajeMujeres" class="resultado-valor"></span></p>
-            </div>
-        </div>
+        </div>        
         <p>____________________________________________________________________________________</p>
-        <div class="text">
-            <p>Calcular la edad de una persona.</p>
-            <div class="form">
-                <div class="table-content">
-                    <table>
-                        <tr>
-                            <td>Introduce la fecha de nacimiento (dia/mes/año):</td>
-                            <td>
-                                <input type="number" id="dia" min="1" max="31" required> /
-                                <input type="number" id="mes" min="1" max="12" required> /
-                                <input type="number" id="anio" min="1800" max="3000" required>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td colspan="2"><br><button type="button" onclick="calcularEdad()">Calcular</button></td>
-                        </tr>
-                    </table>
+        <div class="container">
+            <div class="text">
+                <p>Porcentaje de hombres y mujeres en un grupo de estudiantes.</p>
+                <div class="form">
+                    <div class="table-content">
+                        <table>
+                            <tr>
+                                <td>Introduce la cantidad de hombres:</td>
+                                <td><input type="text" id="hombres" onkeypress="return validarNumero(event)" required></td>
+                            </tr>
+                            <tr>
+                                <td>Introduce la cantidad de mujeres:</td>
+                                <td><input type="text" id="mujeres" onkeypress="return validarNumero(event)" required></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2"><br><button type="button" onclick="calcularPorcentajes()">Calcular</button></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div id="resultado" class="resultado-box">
+                    <p>Porcentaje de hombres: <span id="porcentajeHombres" class="resultado-valor"></span></p>
+                    <p>Porcentaje de mujeres: <span id="porcentajeMujeres" class="resultado-valor"></span></p>
                 </div>
             </div>
-            <div id="resultado" class="resultado-box">
-                <p>La edad es: <span id="edad" class="resultado-valor"></span></p>
+        </div>        
+        <p>____________________________________________________________________________________</p>
+        <div class="container">
+            <div class="text">
+                <p>Calcular Edad</p>
+                <div class="form">
+                    <div class="table-content">
+                        <table>
+                            <tr>
+                                <td>Día de nacimiento:</td>
+                                <td><input type="text" id="dia" oninput="validarNumero(event)" required></td>
+                            </tr>
+                            <tr>
+                                <td>Mes de nacimiento:</td>
+                                <td><input type="text" id="mes" oninput="validarNumero(event)" required></td>
+                            </tr>
+                            <tr>
+                                <td>Año de nacimiento:</td>
+                                <td><input type="text" id="anio" oninput="validarNumero(event)" required></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2"><br><button type="button" onclick="calcularEdad()">Calcular</button></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div id="resultado" class="resultado-box">
+                    <p>La edad calculada es: <span id="edad" class="resultado-valor"></span></p>
+                </div>
             </div>
-        </div>
+        </div>                                                              
+        <p>____________________________________________________________________________________</p>
+        <div class="container">
+            <div class="text">
+                <p>Encontrar el mayor de tres números.</p>
+                <div class="form">
+                    <div class="table-content">
+                        <table>
+                            <tr>
+                                <td>Introduzca el primer número:</td>
+                                <td><input type="text" id="num1" oninput="validarNumero(event)" required></td>
+                            </tr>
+                            <tr>
+                                <td>Introduzca el segundo número:</td>
+                                <td><input type="text" id="num2" oninput="validarNumero(event)" required></td>
+                            </tr>
+                            <tr>
+                                <td>Introduzca el tercer número:</td>
+                                <td><input type="text" id="num3" oninput="validarNumero(event)" required></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2"><br><button type="button" onclick="encontrarMayor()">Encontrar Mayor</button></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div id="resultado" class="resultado-box">
+                    <p>El mayor es: <span id="mayor" class="resultado-valor"></span></p>
+                </div>
+            </div>
+        </div>        
         <p>____________________________________________________________________________________</p>
         <div class="text">
             <p>Comparar dos números y realizar una operación según el orden.</p>
@@ -197,57 +241,31 @@
             </div>
         </div>
         <p>____________________________________________________________________________________</p>
-        <div class="text">
-            <p>Encontrar el mayor de tres números</p>
-            <div class="form">
-                <div class="table-content">
-                    <table>
-                        <tr>
-                            <td>Ingrese el primer número:</td>
-                            <td><input type="number" id="num1" required></td>
-                        </tr>
-                        <tr>
-                            <td>Ingrese el segundo número:</td>
-                            <td><input type="number" id="num2" required></td>
-                        </tr>
-                        <tr>
-                            <td>Ingrese el tercer número:</td>
-                            <td><input type="number" id="num3" required></td>
-                        </tr>
-                        <tr>
-                            <td colspan="2"><br><button type="button" onclick="encontrarMayor()">Encontrar Mayor</button></td>
-                        </tr>
-                    </table>
+        <div class="container">
+            <div class="text">
+                <p>Calcular el pago por horas extras</p>
+                <div class="form">
+                    <div class="table-content">
+                        <table>
+                            <tr>
+                                <td>Horas trabajadas:</td>
+                                <td><input type="text" id="horasTrabajadas" oninput="validarNumero(event)" required></td>
+                            </tr>
+                            <tr>
+                                <td>Salario por hora:</td>
+                                <td><input type="text" id="salarioPorHora" oninput="validarNumero(event)" required></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2"><br><button type="button" onclick="calcularPago()">Calcular</button></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div id="resultado" class="resultado-box">
+                    <p>El pago por horas extras es: <span id="pagoHorasExtras" class="resultado-valor"></span></p>
                 </div>
             </div>
-            <div id="resultado" class="resultado-box">
-                <p>El número mayor es: <span id="mayor" class="resultado-valor"></span></p>
-            </div>
-        </div>
-        <p>____________________________________________________________________________________</p>
-        <div class="text">
-            <p>Calcular el pago por horas extras</p>
-            <div class="form">
-                <div class="table-content">
-                    <table>
-                        <tr>
-                            <td>Horas trabajadas:</td>
-                            <td><input type="number" id="horasTrabajadas" required></td>
-                        </tr>
-                        <tr>
-                            <td>Salario por hora:</td>
-                            <td><input type="number" id="salarioPorHora" required></td>
-                        </tr>
-                        <tr>
-                            <td colspan="2"><br><button type="button" onclick="calcularPago()">Calcular</button></td>
-                        </tr>
-                    </table>
-                </div>
-            </div>
-            <div id="resultado" class="resultado-box">
-                <p>El pago por horas extras es: <span id="pagoHorasExtras" class="resultado-valor"></span></p>
-            </div>
-        </div>
+        </div>               
         <p>____________________________________________________________________________________</p>
         <div class="text">
             <p>Calcular la utilidad anual según la antigüedad en la empresa</p>
