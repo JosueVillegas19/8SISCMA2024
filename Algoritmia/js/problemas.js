@@ -1,9 +1,9 @@
 
 //problema 1
 function invertirPalabras() {
-    // Dividir las palabras separadas por espacio en un arreglo
+    // divide lass palabras separadas por espacio
     var palabras = document.getElementById('p1-input').value;
-    // Invertir el orden del arreglo de palabras
+    // invertirr el orden del arreglo de palabras
     var arregloPalabras = palabras.split(' ');
     var palabrasInvertidas = arregloPalabras.reverse();
     var resultado = palabrasInvertidas.join(' ');
@@ -53,7 +53,7 @@ function problema2(){
 
 //problema 3
 function calcularPalabraUnica() {
-    // Obtener el texto ingresado en el input
+    // el texto ingresado en el input
     var palabras = document.getElementById('p3-input').value;
     var arregloPalabras = palabras.split(',');
 
@@ -61,7 +61,7 @@ function calcularPalabraUnica() {
     var palabraConMaxCaracteresUnicos = '';
     arregloPalabras.forEach(function(palabra) {
         var caracteresUnicos = new Set(palabra.split(''));
-        // Verificar si la cantidad de caracteres únicos es mayor que la máxima encontrada hasta ahora
+        // ver si la cantidad de caracteres únicos es mayor que la máxima encontrada 
         if (caracteresUnicos.size > maxCaracteresUnicos) {
             maxCaracteresUnicos = caracteresUnicos.size;
             palabraConMaxCaracteresUnicos = palabra.trim(); 
