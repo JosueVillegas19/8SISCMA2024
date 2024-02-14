@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Rendimientos Diarios</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: center;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <h2>Calculadora de Rendimientos Diarios</h2>
+    <form id="inversionForm">
+        <label for="cantidad">Cantidad a invertir ($):</label><br>
+        <input type="number" id="cantidad" name="cantidad" required><br><br>
+        <label for="dias">Número de días para la inversión (mínimo 28, máximo 400):</label><br>
+        <input type="number" id="dias" name="dias" min="28" max="400" required><br><br>
+        <button type="submit">Calcular Rendimientos</button>
+    </form><br>
+
+    <div id="tablaRendimientos"></div>
+
+    <script>
+        document.getElementById("inversionForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            calcularRendimientos();
+        });
+
+        function calcularRendimientos() {
+            var cantidad = parseFloat(document.getElementById("cantidad").value);
+            var dias = parseInt(document.getElementById("dias").value);
+            var tasaInteresAnual = 0.16;
+            var tasaDiaria = tasaInteresAnual / 365;
+            var dineroInvertido = cantidad;
+            var tablaRendimientosHTML = '<h3>Rendimientos Diarios</h3>';
+            tablaRendimientosHTML += '<table>';
+            tablaRendimientosHTML += '<tr><th>Día</th><th>Dinero invertido en la caja</th><th>Rendimiento diario</th></tr>';
+            
+            for (var dia = 1; dia <= dias; dia++) {
+                var rendimientoDiario = dineroInvertido * tasaDiaria;
+                tablaRendimientosHTML += '<tr>';
+                tablaRendimientosHTML += '<td>' + dia + '</td>';
+                tablaRendimientosHTML += '<td>$' + dineroInvertido.toFixed(2) + '</td>';
+                tablaRendimientosHTML += '<td>$' + rendimientoDiario.toFixed(2) + '</td>';
+                tablaRendimientosHTML += '</tr>';
+                dineroInvertido += rendimientoDiario;
+            }
+
+            tablaRendimientosHTML += '</table>';
+            document.getElementById("tablaRendimientos").innerHTML = tablaRendimientosHTML;
+        }
+    </script>
+</body>
+</html>

@@ -52,4 +52,5 @@ function validar(formulario)
     alert("El correo " + (expreg.test (txt)? " " : " no " ) + " es valido");
     
     return expreg.test;
+
 }

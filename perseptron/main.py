@@ -29,7 +29,7 @@ for _ in range(100):
         err = pr.train(inp,output)
         errors.append(err)
 
-h = float(input("Introduce tu estatura en centimetros.- "))
+h = float(input("Introduce tu estatura en metros.- "))
 w = float(input("Introduce tu peso en kilogramos.- "))
 
 if pr.predict([1,h,w]) == 1: 
