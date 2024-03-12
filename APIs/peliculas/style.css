@@ -1,0 +1,57 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(to right,  #050098, #6200ff, #f047ff); /* Gradiente de fondo rojo */
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-size: 28px;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    background: linear-gradient(to right,  #001690, #5400db, #9b00a9);
+    padding: 10px 20px; /* Espaciado interior */
+    border-radius: 50px; /* Borde redondeado */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra */
+}
+
+
+#avengers-container,#guardians-container, #xmen-container, #stranger-things-container, #star-wars-container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#avengers-container div,#guardians-container div, #xmen-container div, #stranger-things-container div, #star-wars-container div {
+    flex: 2;
+    flex-direction: row;
+    align-items: center;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+#avengers-container div img, #guardians-container div img, #xmen-container div img, #stranger-things-container div img, #star-wars-container div img{
+    max-width: 300px;
+    height: 450px;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    transition: transform .3s ease;
+}
+
+#avengers-container div img:hover, #guardians-container div img:hover, #xmen-container div img:hover, #stranger-things-container div img:hover, #star-wars-container div img:hover {
+    transform: scale(1.05);
+}
+
+#avengers-container, #guardians-container, #xmen-container, #stranger-things-container, #star-wars-container {
+    background: linear-gradient(to right, #050098, #6200ff, #f047ff); /* Gradiente de fondo azul */
+}
