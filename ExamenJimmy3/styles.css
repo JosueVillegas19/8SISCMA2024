@@ -1,0 +1,586 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;           
+    background: -webkit-linear-gradient(90deg,#25262b,#37407d,#25262b); /* Chrome 10-25, Safari 5.1-6 */ 
+    background: linear-gradient(90deg,#25262b,#37407d,#25262b); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */                                                                                                                                                                                                                                                                                                                       
+}
+
+header {
+    font-size: 16px;
+    background: -webkit-linear-gradient(90deg,#222227,#2c3464,#1a1b1f);
+    background: linear-gradient(90deg,#222227,#2c3464,#1a1b1f);
+    color: #fff;
+    padding: 10px 20px;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    margin-top: 10px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    border-radius: 20px; 
+    justify-content: space-between;
+}
+
+header h1 {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 32px; /* Aumenta el tamaño del texto */
+    letter-spacing: 2px; /* Añade un espaciado entre letras */
+    text-transform: uppercase; /* Convierte el texto a mayúsculas */
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+
+h4 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 100px;
+    background: -webkit-linear-gradient(90deg, #222227, #2c3464, #1a1b1f);
+    background: linear-gradient(90deg, #222227, #2c3464, #1a1b1f);
+    padding: 30px 50px; /* Espaciado interior */
+    border-radius: 10px; /* Borde redondeado */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra */
+}
+
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 20px; /* Aumenta el margen superior */
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 30px; /* Aumenta el espacio entre elementos */
+}
+
+nav ul li:last-child {
+    margin-right: 0;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 10px 20px; /* Aumenta el espacio alrededor del texto */
+    border-radius: 30px; /* Añade bordes redondeados */
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #ffffff10;
+}
+
+nav ul li.iconos {
+    margin-left: auto;
+}
+
+nav ul li.iconos a {
+    margin-left: 30px;
+}
+
+main {
+    padding: 20px;
+}
+
+.catalogo {
+    margin-bottom: 30px;
+}
+
+.catalogo h2 {
+    padding-bottom: 10px;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+}
+
+.productos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 60px;
+}
+
+.producto {
+    width: calc(33.33% - 151px);
+    text-align: center;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)); /* Aplica el fondo gradiente a cada producto */
+    background-size: cover; /* Ajusta el tamaño del fondo */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Aplica la sombra */
+    border-radius: 20px;
+    padding: 20px; /* Agrega padding */
+}
+
+
+.precio {
+    margin-bottom: 10px;
+    color: #fff; /* Cambia el color del texto a blanco */
+    font-weight: bold;
+}
+
+.producto img {
+    max-width: 300px; /* Ajusta el ancho máximo según tus necesidades */
+    height: 450px; /* Ajusta la altura según tus necesidades */
+    border-radius: 10px; /* Agrega bordes redondos */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Aplica la sombra */
+    transition: transform .3s ease; /* Agrega una transición suave al transformar */   
+}
+
+.producto img:hover {
+    transform: scale(1.05); /* Aumenta el tamaño al 105% al pasar el mouse sobre la imagen */
+}
+
+
+.producto h3 {
+    margin-top: 10px;
+    color: #fff; /* Cambia el color del texto a blanco */
+    
+}
+
+.boton {
+    background-color: #5860ce;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.boton:hover {
+    background-color: #323675;
+}
+
+.boton-container {
+    text-align: center;
+    position: relative;
+    top: -160px; /* Ajusta la posición vertical del contenedor hacia arriba */
+}
+
+footer {
+    background: -webkit-linear-gradient(90deg,#25262b,#37407d,#25262b); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(90deg,#25262b,#37407d,#25262b); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.carrito-popup {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.carrito-contenido, #confirmacion-pago {
+    background-color: #f8f8f8; /* Color de fondo */
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #ddd; /* Color del borde */
+    width: 80%;
+    max-width: 600px;
+    position: relative;
+    color: #000; /* Color del texto */
+    border-radius: 10px; /* Agrega bordes redondos */
+}
+
+.carrito-contenido h2, #confirmacion-pago h1 {
+    text-align: center;
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.carrito-contenido table, #confirmacion-pago table {
+    width: 100%;
+    border-collapse: collapse;
+    font-weight: bold;
+}
+
+.carrito-contenido th, .carrito-contenido td, #confirmacion-pago th, #confirmacion-pago td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.carrito-contenido th, #confirmacion-pago th {
+    background-color: #ddd; /* Color de fondo para las celdas de encabezado */
+}
+
+.carrito-contenido tfoot, #confirmacion-pago tfoot {
+    background-color: #ddd; /* Color de fondo para el pie de tabla */
+}
+
+.carrito-contenido tfoot td, #confirmacion-pago tfoot td {
+    font-weight: bold;
+}
+
+
+.cerrar {
+    color: #ffffff;
+    float: right; /* Cambia la posición a la esquina superior izquierda */
+    font-size: 31px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  
+  .modal-contenido {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 10px;
+    position: relative;
+  }
+  
+  .cerrar-modal {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .cerrar-modal:hover,
+  .cerrar-modal:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  /* Estilos para el formulario dentro del modal */
+  .modal-contenido form div {
+    margin-bottom: 10px;
+  }
+  
+  .modal-contenido label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .modal-contenido input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+  }
+  
+  .modal-contenido button {
+    background-color: #5860ce;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .modal-contenido button:hover {
+    background-color: #323675;
+  }
+
+  #detalle-compra {
+    width: 40%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    margin-top: 20px;
+    border-radius: 10px; /* Agregar radio de borde */
+    overflow: hidden; /* Ocultar las esquinas del borde cuando se aplique el radio de borde */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Sombra ligera alrededor de la tabla */
+}
+
+#detalle-compra th, #detalle-compra td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+    color: #fff;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+}
+
+#detalle-compra th {
+    background-color: #45509b;
+    color: #ffffff; /* Color de texto oscuro para el encabezado */
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+}
+
+#detalle-compra tbody tr:nth-child(even) {
+    background-color: #45509b;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+}
+
+#detalle-compra tfoot td {
+    font-weight: bold;
+    background-color: #f8f9fa; /* Color de fondo para el pie de tabla */
+}
+
+#detalle-compra tfoot td:first-child {
+    text-align: right;
+    
+}
+
+/* Estilos para resaltar el total */
+#detalle-compra tfoot td:last-child {
+    color: #f44336; /* Color rojo para el total */
+    font-size: 1.1em; /* Tamaño de fuente ligeramente más grande */
+}
+
+/* Estilos para el modal de inicio de sesión y registro */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-contenido {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 10px;
+    position: relative;
+    color: #000; /* Color de texto negro */
+}
+
+.cerrar-modal {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.cerrar-modal:hover,
+.cerrar-modal:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Estilos para el formulario dentro del modal */
+.modal-contenido form div {
+    margin-bottom: 10px;
+}
+
+.modal-contenido label {
+    display: block;
+    margin-bottom: 5px;
+    color: #000; /* Color de texto negro */
+}
+
+.modal-contenido input[type="text"],
+.modal-contenido input[type="password"] {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.modal-contenido button {
+    background-color: #5860ce;
+    margin-left: center;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.modal-contenido button:hover {
+    background-color: #323675;
+}
+
+/* Estilos para el botón de cerrar */
+.cerrar {
+    color: #aaa; /* Color del botón de cerrar */
+    float: right; /* Coloca el botón en la esquina superior derecha */
+    font-size: 28px; /* Tamaño del texto */
+    font-weight: bold; /* Hace que el texto sea más audaz */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+}
+
+.cerrar:hover {
+    color: black; /* Cambia el color al pasar el cursor sobre el botón */
+}
+
+
+.carousel {
+    width: 100%;
+    height: 400px; /* Modifica la altura según tus necesidades */
+    position: relative;
+    overflow: hidden; /* Asegura que las imágenes no se desborden del contenedor */
+    border-radius: 20px;
+    border-radius: 30px;
+    margin-top: 37px;
+}
+
+.carousel img {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 1s ease;
+    border-radius: 30px;
+}
+
+.carousel img:first-child {
+    opacity: 1; /* Muestra la primera imagen al principio */
+}
+
+/*popup del formulario de login y registro*/
+.user-popup {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.popup-content {
+    background-color: #f8f8f8;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    width: 80%;
+    max-width: 600px;
+    position: relative;
+    color: #000;
+    border-radius: 10px;
+}
+
+.popup-content h2 {
+    text-align: center;
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.popup-content input[type="text"],
+.popup-content input[type="password"] {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.popup-content button {
+    background-color: #5860ce;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.popup-content button:hover {
+    background-color: #323675;
+}
+
+.popup-content p {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.popup-content p a {
+    color: #5860ce;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.popup-content p a:hover {
+    color: #323675;
+}
+
+.close-popup {
+    color: #888888;
+    float: right;
+    font-size: 31px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-popup:hover{
+    color: #494949;
+}
+
+#logout-button {
+    background-color: #5860ce;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#logout-button:hover {
+    background-color: #323675;
+}
+
+.eliminar-producto {
+    background-color: #5860ce;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.eliminar-producto:hover {
+    background-color: #323675;
+}
+
+
+.producto-id {
+    color: #ffffff;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    margin-bottom: 20px;
+}

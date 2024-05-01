@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bienvenido</title>
+</head>
+<body>
+
+<script>
+// Obtener el nombre de usuario de la URL
+var urlParams = new URLSearchParams(window.location.search);
+var username = urlParams.get('username');
+
+// Mostrar un mensaje de bienvenida con el nombre de usuario
+document.write("<h1>Hola, " + username + "</h1>");
+</script>
+
+</body>
+</html>

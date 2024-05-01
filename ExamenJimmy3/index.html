@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DARLEX</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <header>
+        <h1>DARLEX</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">INICIO</a></li>
+                <li><a href="catalogo.html">CATÁLOGO</a></li>
+                <li><a href="ticket.html">MIS PEDIDOS</a></li>
+                <li>
+                    <a href="#" id="carrito-link"><i class="fas fa-shopping-cart"></i></a>
+                    <div id="carrito-popup" class="carrito-popup">
+                        <div class="carrito-contenido">
+                            <span class="cerrar" id="cerrar-popup">&times;</span>
+                            <h2>Carrito de Compras</h2>
+                            <table id="tabla-carrito">
+                                <thead>
+                                    <tr>
+                                        <th>Número</th>
+                                        <th>Producto</th>
+                                        <th>Precio</th>
+                                        <th>Cantidad</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="cuerpo-carrito">
+                                    <!-- Aquí se agregará el contenido dinámicamente con JavaScript -->
+                                </tbody>
+                                <tfoot>
+                                    <tr>
+                                        <td colspan="3">Total:</td>
+                                        <td id="total">$0.00</td>
+                                    </tr>
+                                </tfoot>
+                            </table>
+                            <br>
+                            <button id="boton-pagar" class="boton">Pagar</button>
+                        </div>
+                    </div>
+                </li>
+
+                <li>
+                    <a href="#" id="user-popup-link"><i class="fas fa-user"></i></a>
+                    <div id="user-popup" class="user-popup" style="display: none;">
+                        <div class="popup-content">
+                            <span class="close-popup" id="close-popup">&times;</span>
+                            <div class="login-register-form">
+                                <div id="register-form">
+                                    <h2>Registro</h2>
+                                    <input type="text" id="registerUsername" placeholder="Usuario">
+                                    <input type="password" id="registerPassword" placeholder="Contraseña">
+                                    <button onclick="register()">Registrar</button>
+                                    <p>¿Ya tienes una cuenta? <a href="#" onclick="showLogin()">Iniciar sesión</a></p>
+                                </div>
+                    
+                                <div id="login-form" style="display: none;">
+                                    <h2>Login</h2>
+                                    <input type="text" id="loginUsername" placeholder="Usuario">
+                                    <input type="password" id="loginPassword" placeholder="Contraseña">
+                                    <button onclick="login()">Iniciar sesión</button>
+                                    <p>¿No tienes una cuenta? <a href="#" onclick="showRegisterForm()">Registrarse</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>              
+                </li>
+            
+                <li id="user-greeting" style="display: none;">Hola, <span id="username"></span>!</li>
+
+                <li id="logout-li" style="display: none;"><button id="logout-button">Cerrar Sesión</button></li>
+
+            </ul>
+        </nav>        
+    </header>
+
+    <main>
+        <section>
+            <div id="carousel" class="carousel">
+                <img src="image/nb123.jpg" alt="Videojuego 1">
+                <img src="image/fifa213.jpg" alt="Videojuego 1">
+                <img src="image/p21.jpg" alt="Videojuego 1">
+                <img src="image/halo1.jpg" alt="Videojuego 1">
+                <img src="image/gt32.jpg" alt="Videojuego 1">
+                <img src="image/fornitet.jpg" alt="Videojuego 1">
+            </div>
+        </section>
+
+        <section class="catalogo">
+            <!-- Contenido del catálogo -->
+        </section>
+
+        <section class="catalogo">
+            <h4>INICIO</h4>
+            <div class="productos">
+                <div class="producto">
+                    <img src="image/fc.jpg" alt="Otro Videojuego">
+                    <h3>EA SPORTS FC 24</h3>
+                    <span class="precio">$899.99</span> 
+                    <button class="boton">AÑADIR AL CARRITO</button>
+                </div>
+               
+                <div class="producto">
+                    <img src="image/spiderman.jpg" alt="Otro Videojuego">
+                    <h3>SPIDER-MAN 2</h3>
+                    <span class="precio">$999.99</span> 
+                    <button class="boton">AÑADIR AL CARRITO</button>
+                </div>
+
+                <div class="producto">
+                    <img src="image/godofwar.jpg" alt="Otro Videojuego">
+                    <h3>GOD OF WAR RAGNAROK</h3>
+                    <span class="precio">$1099.99</span> 
+                    <button class="boton">AÑADIR AL CARRITO</button>
+                </div>
+
+                <div class="producto">
+                    <img src="image/gta5.jpg" alt="Otro Videojuego">
+                    <h3>GRAND THEFT AUTO 5</h3>
+                    <span class="precio">$799.99</span> 
+                    <button class="boton">AÑADIR AL CARRITO</button>
+                </div>
+
+                <div class="producto">
+                    <img src="image/minecraft2.jpg" alt="Otro Videojuego">
+                    <h3>MINECRAFT</h3>
+                    <span class="precio">$499.99</span> 
+                    <button class="boton">AÑADIR AL CARRITO</button>
+                </div>
+
+                <div class="producto">
+                    <img src="image/nba.jpg" alt="Otro Videojuego">
+                    <h3>NBA 2K24</h3>
+                    <span class="precio">$699.99</span> 
+                    <button class="boton">AÑADIR AL CARRITO</button>
+                </div>
+
+                <div class="producto">
+                    <img src="image/fornite1.jpg" alt="Otro Videojuego">
+                    <h3>FORTNITE</h3>
+                    <span class="precio">$100.99</span> 
+                    <button class="boton">AÑADIR AL CARRITO</button>
+                </div>
+
+                <div class="producto">
+                    <img src="image/call.jpg" alt="Otro Videojuego">
+                    <h3>CALL OF DUTY WARZONE 2.0</h3>
+                    <span class="precio">$759.99</span> 
+                    <button class="boton">AÑADIR AL CARRITO</button>
+                </div>
+
+                <div class="producto">
+                    <img src="image/mariooo.jpg" alt="Otro Videojuego">
+                    <h3>MARIO KART 8</h3>
+                    <span class="precio">$819.99</span> 
+                    <button class="boton">AÑADIR AL CARRITO</button>
+                </div>
+
+                <div class="producto">
+                    <img src="image/haloc.jpg" alt="Otro Videojuego">
+                    <h3>HALO INFINITY</h3>
+                    <span class="precio">$1599.99</span> 
+                    <button class="boton">AÑADIR AL CARRITO</button>
+                </div>
+
+                <div class="producto">
+                    <img src="image/resident.png" alt="Otro Videojuego">
+                    <h3>RESIDENT EVIL 4</h3>
+                    <span class="precio">$1099.99</span> 
+                    <button class="boton">AÑADIR AL CARRITO</button>
+                </div>
+
+                <div class="producto">
+                    <img src="image/morales.png" alt="Otro Videojuego">
+                    <h3>SPIDER-MAN MILES MORALES</h3>
+                    <span class="precio">$899.99</span> 
+                    <button class="boton">AÑADIR AL CARRITO</button>
+                </div>
+
+                <div class="producto">
+                    <img src="image/kombar.png" alt="Otro Videojuego">
+                    <h3>MORTAL KOMBAT 1</h3>
+                    <span class="precio">$1299.99</span> 
+                    <button class="boton">AÑADIR AL CARRITO</button>
+                </div>
+
+                <div class="producto">
+                    <img src="image/hogwarts.jpeg" alt="Otro Videojuego">
+                    <h3>HOGWARTS LEGACY</h3>
+                    <span class="precio">$1299.99</span> 
+                    <button class="boton">AÑADIR AL CARRITO</button>
+                </div>
+
+                <div class="producto">
+                    <img src="image/destiniy.png" alt="Otro Videojuego">
+                    <h3>DESTINY 2</h3>
+                    <span class="precio">$1199.99</span> 
+                    <button class="boton">AÑADIR AL CARRITO</button>
+                </div>
+
+                <div class="producto">
+                    <img src="image/forza.png" alt="Otro Videojuego">
+                    <h3>FORZA HORIZON 5</h3>
+                    <span class="precio">$999.99</span> 
+                    <button class="boton">AÑADIR AL CARRITO</button>
+                </div>
+
+                <div class="producto">
+                    <img src="image/left.png" alt="Otro Videojuego">
+                    <h3>LEFT 4 DEAD 2</h3>
+                    <span class="precio">$499.99</span> 
+                    <button class="boton">AÑADIR AL CARRITO</button>
+                </div>
+
+                <div class="producto">
+                    <img src="image/fifa22.png" alt="Otro Videojuego">
+                    <h3>FIFA 2021</h3>
+                    <span class="precio">$699.99</span> 
+                    <button class="boton">AÑADIR AL CARRITO</button>
+                </div>
+
+                <div class="producto">
+                    <img src="image/Hollow.jpg" alt="Otro Videojuego">
+                    <h3>HOLLOW KNIGHT</h3>
+                    <span class="precio">$299.99</span> 
+                    <button class="boton">AÑADIR AL CARRITO</button>
+                </div>
+
+                <div class="producto">
+                    <img src="image/gears.png" alt="Otro Videojuego">
+                    <h3>GEARS OF WAR</h3>
+                    <span class="precio">$499.99</span> 
+                    <button class="boton">AÑADIR AL CARRITO</button>
+                </div>
+
+                <div class="producto">
+                    <img src="image/red.jpg" alt="Otro Videojuego">
+                    <h3>RED DEAD REDEMPTION II</h3>
+                    <span class="precio">$799.99</span> 
+                    <button class="boton">AÑADIR AL CARRITO</button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 DARLEX</p>
+    </footer>
+</body>
+</html>
